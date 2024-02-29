@@ -1,4 +1,4 @@
-# Docker-Soap UI-groovy
+# Dockerfiles collection
 
 Collection Docker images I made for my personal use. Images are not posted on Dockerhub, so you can't pull it from there but you can grab the Dockerfiles if needed.
 
