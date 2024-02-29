@@ -34,7 +34,7 @@ Image based on **alpine:3.19.1** contains:
 - Sops 3.8.1
 
 KubeCTL, Helm, Helmfile and Sops are installed in `/usr/local/bin`.
-___
+
 ### Maven + Chrome
 
 Image based on **maven:3.9.6-eclipse-temurin-11** contains:
@@ -42,7 +42,7 @@ Image based on **maven:3.9.6-eclipse-temurin-11** contains:
 - Chrome stable version
 - Chromedriver latest stable version
 
-### SoapIO + Groovy
+### SoapUI + Groovy
 
 Image based on **openJDK:11-jdk-slim** contains:
    
@@ -50,7 +50,7 @@ Image based on **openJDK:11-jdk-slim** contains:
 - Groovy 4.0.18 
 
 Groovy can be found in `/home/groovy`, SoapUI in `/home/soapui`.
-___
+
 ## Usage
 
 As this is a personal sandbox use at your own risk.
