@@ -63,7 +63,6 @@ v1.3:
 
 v1.2:
 - update groovy version to 4.0.15, soapui to 5.7.1
-- license added
 
 v1.1:
 - update groovy version to 4.0.7
