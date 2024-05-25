@@ -1,6 +1,6 @@
 FROM openjdk:11-jdk-slim
 
-ENV GROOVY_VERSION=4.0.18 \
+ENV GROOVY_VERSION=4.0.21 \
     SOAPUI_VERSION=5.7.2 \
     GROOVY_HOME="/home/groovy" \
     PATH="$PATH:/home/groovy/bin" \

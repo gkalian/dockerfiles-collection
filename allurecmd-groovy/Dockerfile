@@ -1,11 +1,11 @@
-FROM alpine:3.19.1
+FROM alpine:3.20.0
 
 RUN apk update \
   && apk add --update --no-cache openjdk11 tzdata curl unzip bash git \
   && rm -rf /var/lib/apt/lists/*
 
 # https://groovy.apache.org/download.html
-ENV GROOVY_VERSION=4.0.18 \
+ENV GROOVY_VERSION=4.0.21 \
     GROOVY_HOME="/home/groovy" \
     PATH="$PATH:/home/groovy/bin"
 
@@ -15,7 +15,7 @@ RUN curl -kLO https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribut
       && rm apache-groovy-binary-${GROOVY_VERSION}.zip
 
 # https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
-ENV ALLURECMD_VERSION=2.9.0 \
+ENV ALLURECMD_VERSION=2.29.0 \
     PATH="${PATH}:/home/allure-${ALLURECMD_VERSION}/bin"
 
 RUN curl -kLO https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/${ALLURECMD_VERSION}/allure-commandline-${ALLURECMD_VERSION}.zip \
