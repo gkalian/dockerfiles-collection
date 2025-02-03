@@ -1,9 +1,11 @@
 name: Docker Build
 
-on:
-  push:
-    paths:
-      - '**/Dockerfile'
+on: push
+
+# on:
+#   push:
+#     paths:
+#       - '**/Dockerfile'
 
 jobs:
   build:
@@ -20,7 +22,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
-      
+
       - name: Build Docker image
         run: |
           docker build -t test-image -f ${{ matrix.dockerfile }} $(dirname ${{ matrix.dockerfile }})
