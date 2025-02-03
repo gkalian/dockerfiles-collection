@@ -3,8 +3,7 @@ FROM maven:3.9.9-eclipse-temurin-11
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} /etc/timezone
 
-RUN apt-get update -qqy && apt-get install --no-install-recommends -qqy gpg unzip gnupg \
-    && rm /etc/apt/sources.list.d/google-chrome.list
+RUN apt-get update -qqy && apt-get install --no-install-recommends -qqy gpg unzip gnupg
 
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
