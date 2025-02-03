@@ -1,10 +1,10 @@
 FROM openjdk:11.0.16-jdk-slim
 
 ENV GROOVY_VERSION=4.0.21 \
-    SOAPUI_VERSION=5.7.2 \
-    GROOVY_HOME="/home/groovy" \
-    PATH="$PATH:/home/groovy/bin" \
-    SOAPUI_HOME="/home/soapui"
+      SOAPUI_VERSION=5.7.2 \
+      GROOVY_HOME="/home/groovy" \
+      PATH="$PATH:/home/groovy/bin" \
+      SOAPUI_HOME="/home/soapui"
 
 RUN apt-get update \
       && apt-get install --no-install-recommends -y curl unzip \
