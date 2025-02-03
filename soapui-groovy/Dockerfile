@@ -1,4 +1,4 @@
-FROM openjdk:11-jdk-slim
+FROM openjdk:11.0.16-jdk-slim
 
 ENV GROOVY_VERSION=4.0.21 \
     SOAPUI_VERSION=5.7.2 \
