@@ -58,6 +58,10 @@ As this is a personal sandbox use at your own risk.
 ## Changelog
 
 v1.4:
+- Renovate bot added
+- Github workflow added
+
+v1.4:
 - updated versions
 
 v1.3:
