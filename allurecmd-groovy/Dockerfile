@@ -1,4 +1,4 @@
-FROM alpine:3.20.0
+FROM alpine:3.21.2
 
 RUN apk update \
   && apk add --update --no-cache openjdk11 tzdata curl unzip bash git \

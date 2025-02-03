@@ -1,4 +1,4 @@
-FROM alpine:3.20.0
+FROM alpine:3.21.2
 
 RUN apk update --no-cache && \
     apk add --no-cache wget git
