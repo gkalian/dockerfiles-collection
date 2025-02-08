@@ -57,7 +57,7 @@ As this is a personal sandbox use at your own risk.
 
 ## Changelog
 
-v1.4:
+v1.5:
 - Renovate bot added
 - Github workflow added
 
