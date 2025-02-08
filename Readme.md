@@ -13,7 +13,7 @@ Collection Docker images I made for my personal use. Images are not posted on Do
 ___
 ### Allure CMD + Groovy
 
-Image based on **alpine:3.20.0** contains:
+Image based on **alpine:3.21.2** contains:
 
 - Groovy 4.0.20
 - AllureCMD 2.29.0
@@ -22,7 +22,7 @@ Tools can be found in `/home`.
 
 ### KubeCTL + Helm + Helmfile
 
-Image based on **alpine:3.20.0** contains:
+Image based on **alpine:3.21.2** contains:
 
 - KubeCTL 1.30.1
 - Helm 3.15.1
@@ -37,7 +37,7 @@ KubeCTL, Helm, Helmfile and Sops are installed in `/usr/local/bin`.
 
 ### Maven + Chrome
 
-Image based on **maven:3.9.6-eclipse-temurin-11** contains:
+Image based on **maven:3.9.9-eclipse-temurin-11** contains:
 
 - Chrome stable version
 - Chromedriver latest stable version
