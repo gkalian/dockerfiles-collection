@@ -30,4 +30,4 @@ RUN curl -kLO https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribut
       && chown -R appuser:appgroup /home/groovy /home/allure-cmd
 
 WORKDIR /home/groovy
-USER user
+USER userchown -R user:appgroup /home/groovy /home/soapuichown -R user:appgroup /home/user

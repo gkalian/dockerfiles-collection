@@ -45,7 +45,7 @@ RUN wget https://github.com/getsops/sops/releases/download/v${SOPS_VERSION}/sops
 RUN kubectl version --client=true && \
     helm version && \
     helmfile --version && \
-    chown -R appuser:appgroup /home/appuser
+    chown -R user:appgroup /home/user
 
 USER user
 WORKDIR /home/user

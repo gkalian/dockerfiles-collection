@@ -28,7 +28,7 @@ RUN export CHROME_DRIVER_VERSION=$(curl -s https://googlechromelabs.github.io/ch
     && mv /opt/chromedriver-linux64/chromedriver /opt/chromedriver-${CHROME_DRIVER_VERSION} \
     && chmod 755 /opt/chromedriver-${CHROME_DRIVER_VERSION} \
     && ln -s /opt/chromedriver-${CHROME_DRIVER_VERSION} /usr/bin/chromedriver \
-    && chown -R appuser:appgroup /home/appuser
+    && chown -R user:appgroup /home/user
 
 USER user
 WORKDIR /home/user

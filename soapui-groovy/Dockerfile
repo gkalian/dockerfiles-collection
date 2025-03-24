@@ -26,7 +26,7 @@ RUN curl -kLO https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribut
       && tar xf SoapUI-${SOAPUI_VERSION}-linux-bin.tar.gz \
       && mv SoapUI-${SOAPUI_VERSION} /home/soapui \
       && rm SoapUI-${SOAPUI_VERSION}-linux-bin.tar.gz \
-      && chown -R appuser:appgroup /home/groovy /home/soapui
+      && chown -R user:appgroup /home/groovy /home/soapui
 
 USER user
 WORKDIR /home/soapui
