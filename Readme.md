@@ -3,12 +3,13 @@
 Collection Docker images I made for my personal use. Images are not posted on Dockerhub, so you can't pull it from there but you can grab the Dockerfiles if needed.
 
 <!-- TOC -->
-  * [Allure CMD + Groovy](#allure-cmd--groovy)
-  * [KubeCTL + Helm + Helmfile](#kubectl--helm--helmfile)
-  * [Maven + Chrome](#maven--chrome)
-  * [SoapIO + Groovy](#soapio--groovy)
-  * [Usage](#usage)
-  * [Changelog](#changelog)
+- [Dockerfiles collection](#dockerfiles-collection)
+    - [Allure CMD + Groovy](#allure-cmd--groovy)
+    - [KubeCTL + Helm + Helmfile](#kubectl--helm--helmfile)
+    - [Maven + Chrome](#maven--chrome)
+    - [SoapUI + Groovy](#soapui--groovy)
+  - [Usage](#usage)
+  - [Changelog](#changelog)
 <!-- TOC -->
 ___
 ### Allure CMD + Groovy
@@ -56,6 +57,11 @@ Groovy can be found in `/home/groovy`, SoapUI in `/home/soapui`.
 As this is a personal sandbox use at your own risk.
 
 ## Changelog
+
+v1.6:
+- Labels added
+- Optimized
+- Github workflow updated
 
 v1.5:
 - Renovate bot added

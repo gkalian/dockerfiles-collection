@@ -1,11 +1,9 @@
 name: Docker Build
 
-on: push
-
-# on:
-#   push:
-#     paths:
-#       - '**/Dockerfile'
+on:
+  push:
+    paths:
+      - '**/Dockerfile'
 
 jobs:
   build:
@@ -23,6 +21,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Lint Dockerfile
+        uses: hadolint/hadolint-action@v3.1.0
+        with:
+          dockerfile: ${{ matrix.dockerfile }}
+
       - name: Build Docker image
         run: |
-          docker build -t test-image -f ${{ matrix.dockerfile }} $(dirname ${{ matrix.dockerfile }})
+          docker build -t test-image:${{ github.sha }} -f ${{ matrix.dockerfile }} $(dirname ${{ matrix.dockerfile }})
+
+      - name: Scan for vulnerabilities
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'test-image:${{ github.sha }}'
+          format: 'table'
+          exit-code: '0'

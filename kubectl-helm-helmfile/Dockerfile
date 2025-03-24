@@ -1,7 +1,13 @@
 FROM alpine:3.21.2
 
+LABEL maintainer="https://github.com/gkalian"
+LABEL description="Alpine-based image with kubectl, Helm, Helmfile and related tools for Kubernetes deployment"
+
 RUN apk update --no-cache && \
     apk add --no-cache wget git
+
+# Create a non-root user
+RUN addgroup -S appgroup && adduser -S user -G appgroup
 
 # https://kubernetes.io/releases/
 ARG KUBECTL_VERSION=1.30.1
@@ -27,10 +33,9 @@ RUN wget "https://github.com/helmfile/helmfile/releases/download/v${HELMFILE_VER
 ARG HELM_DIFF_VERSION=v3.9.6
 ARG HELM_SECRETS_VERSION=v4.6.0
 ARG HELM_GIT_VERSION=v0.16.0
-RUN \
-  helm plugin install https://github.com/databus23/helm-diff --version ${HELM_DIFF_VERSION} && \
-  helm plugin install https://github.com/jkroepke/helm-secrets --version ${HELM_SECRETS_VERSION} && \
-  helm plugin install https://github.com/aslafy-z/helm-git.git --version ${HELM_GIT_VERSION}
+RUN helm plugin install https://github.com/databus23/helm-diff --version ${HELM_DIFF_VERSION} && \
+    helm plugin install https://github.com/jkroepke/helm-secrets --version ${HELM_SECRETS_VERSION} && \
+    helm plugin install https://github.com/aslafy-z/helm-git.git --version ${HELM_GIT_VERSION}
 
 # https://github.com/getsops/sops/releases
 ARG SOPS_VERSION=3.8.1
@@ -39,4 +44,8 @@ RUN wget https://github.com/getsops/sops/releases/download/v${SOPS_VERSION}/sops
 
 RUN kubectl version --client=true && \
     helm version && \
-    helmfile --version
+    helmfile --version && \
+    chown -R appuser:appgroup /home/appuser
+
+USER user
+WORKDIR /home/user
