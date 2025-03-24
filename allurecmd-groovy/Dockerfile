@@ -27,7 +27,7 @@ RUN curl -kLO https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribut
       && unzip "allure-commandline-${ALLURECMD_VERSION}.zip" \
       && mv "/allure-${ALLURECMD_VERSION}" "/home/allure-cmd" \
       && rm allure-commandline-${ALLURECMD_VERSION}.zip \
-      && chown -R appuser:appgroup /home/groovy /home/allure-cmd
+      && chown -R user:appgroup /home/groovy /home/allure-cmd
 
 WORKDIR /home/groovy
-USER userchown -R user:appgroup /home/groovy /home/soapuichown -R user:appgroup /home/user
+USER user
