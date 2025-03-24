@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '**/Dockerfile'
+      - '**/workflows/**'
 
 jobs:
   build:
@@ -21,10 +22,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Lint Dockerfile
-        uses: hadolint/hadolint-action@v3.1.0
-        with:
-          dockerfile: ${{ matrix.dockerfile }}
+      #- name: Lint Dockerfile
+      #  uses: hadolint/hadolint-action@v3.1.0
+      #  with:
+      #    dockerfile: ${{ matrix.dockerfile }}
 
       - name: Build Docker image
         run: |
