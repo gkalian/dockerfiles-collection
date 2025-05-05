@@ -25,7 +25,7 @@ Tools can be found in `/home`.
 
 Image based on **alpine:3.21.2** contains:
 
-- KubeCTL 1.33.0
+- KubeCTL 1.32.4
 - Helm 3.17.3
 - Helmfile 0.170.0
 - Helm plugins:

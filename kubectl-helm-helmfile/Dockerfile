@@ -10,7 +10,7 @@ RUN apk update --no-cache && \
 RUN addgroup -S appgroup && adduser -S user -G appgroup
 
 # https://kubernetes.io/releases/
-ARG KUBECTL_VERSION=1.33.0
+ARG KUBECTL_VERSION=1.32.4
 RUN wget "https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl" --quiet --output-document=/usr/local/bin/kubectl \
   && chmod +x /usr/local/bin/kubectl \
   && kubectl version --client --output=yaml 2>&1 | grep -q "${KUBECTL_VERSION}"
