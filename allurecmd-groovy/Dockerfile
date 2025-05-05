@@ -8,12 +8,12 @@ RUN apk update \
   && rm -rf /var/lib/apt/lists/*
 
 # https://groovy.apache.org/download.html
-ENV GROOVY_VERSION=4.0.21 \
+ENV GROOVY_VERSION=4.0.26 \
     GROOVY_HOME="/home/groovy" \
     PATH="$PATH:/home/groovy/bin"
 
 # https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
-ENV ALLURECMD_VERSION=2.29.0 \
+ENV ALLURECMD_VERSION=2.34.0 \
     PATH="${PATH}:/home/allure-cmd/bin"
 
 # Create a non-root user

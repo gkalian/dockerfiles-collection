@@ -3,8 +3,8 @@ FROM openjdk:11.0.16-jdk-slim
 LABEL maintainer="https://github.com/gkalian"
 LABEL description="SoapUI with Groovy for API testing and automation"
 
-ENV GROOVY_VERSION=4.0.21 \
-      SOAPUI_VERSION=5.7.2 \
+ENV GROOVY_VERSION=4.0.26 \
+      SOAPUI_VERSION=5.8.0 \
       GROOVY_HOME="/home/groovy" \
       PATH="$PATH:/home/groovy/bin" \
       SOAPUI_HOME="/home/soapui"
@@ -18,6 +18,7 @@ RUN apt-get update \
       && rm -rf /var/lib/apt/lists/*
 
 # https://groovy.apache.org/download.html
+# https://www.soapui.org/downloads/latest-release/
 RUN curl -kLO https://archive.apache.org/dist/groovy/${GROOVY_VERSION}/distribution/apache-groovy-binary-${GROOVY_VERSION}.zip \
       && unzip "apache-groovy-binary-${GROOVY_VERSION}.zip" \
       && mv "/groovy-${GROOVY_VERSION}" "/home/groovy" \
