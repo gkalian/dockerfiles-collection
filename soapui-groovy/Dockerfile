@@ -3,7 +3,7 @@ FROM openjdk:11.0.16-jdk-slim
 LABEL maintainer="https://github.com/gkalian"
 LABEL description="SoapUI with Groovy for API testing and automation"
 
-ENV GROOVY_VERSION=4.0.26 \
+ENV GROOVY_VERSION=4.0.27 \
       SOAPUI_VERSION=5.8.0 \
       GROOVY_HOME="/home/groovy" \
       PATH="$PATH:/home/groovy/bin" \

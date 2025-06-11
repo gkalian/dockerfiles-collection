@@ -1,4 +1,4 @@
-FROM alpine:3.21.3
+FROM alpine:3.22.0
 
 LABEL maintainer="https://github.com/gkalian"
 LABEL description="Alpine-based image with Groovy and Allure Command Line for test reporting"
@@ -8,7 +8,7 @@ RUN apk update \
   && rm -rf /var/lib/apt/lists/*
 
 # https://groovy.apache.org/download.html
-ENV GROOVY_VERSION=4.0.26 \
+ENV GROOVY_VERSION=4.0.27 \
     GROOVY_HOME="/home/groovy" \
     PATH="$PATH:/home/groovy/bin"
 
