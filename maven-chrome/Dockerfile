@@ -4,7 +4,7 @@ LABEL maintainer="https://github.com/gkalian"
 LABEL description="Maven image with Chrome and ChromeDriver for web testing"
 
 # Set shell options for better error handling
-SHELL ["/bin/sh", "-o", "pipefail", "-c"]
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 ENV TZ=Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/"${TZ}" /etc/localtime && echo "${TZ}" > /etc/timezone
