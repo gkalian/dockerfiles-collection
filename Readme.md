@@ -14,24 +14,24 @@ Collection Docker images I made for my personal use. Images are not posted on Do
 ___
 ### Allure CMD + Groovy
 
-Image based on **alpine:3.21.2** contains:
+Image based on **alpine:3.22.0** contains:
 
-- Groovy 4.0.26
+- Groovy 4.0.27
 - AllureCMD 2.34.0
 
 Tools can be found in `/home`.
 
 ### KubeCTL + Helm + Helmfile
 
-Image based on **alpine:3.21.2** contains:
+Image based on **alpine:3.22.0** contains:
 
-- KubeCTL 1.32.4
-- Helm 3.17.3
+- KubeCTL 1.33.0
+- Helm 3.18.2
 - Helmfile 0.170.0
 - Helm plugins:
-  - Helm diff v3.11.0
-  - Helm secrets v4.6.4
-  - Helm git v0.17.0
+  - Helm diff v3.12.2
+  - Helm secrets v4.6.5
+  - Helm git v1.4.0
 - Sops 3.810.2
 
 KubeCTL, Helm, Helmfile and Sops are installed in `/usr/local/bin`.
@@ -48,7 +48,7 @@ Image based on **maven:3.9.9-eclipse-temurin-11** contains:
 Image based on **openJDK:11-jdk-slim** contains:
    
 - SoapUI 5.8.0
-- Groovy 4.0.26
+- Groovy 4.0.27
 
 Groovy can be found in `/home/groovy`, SoapUI in `/home/soapui`.
 
@@ -57,6 +57,9 @@ Groovy can be found in `/home/groovy`, SoapUI in `/home/soapui`.
 As this is a personal sandbox use at your own risk.
 
 ## Changelog
+
+v1.8:
+- versions updated (breaking change in helm git plugin - v.1.4.0)
 
 v1.7:
 - versions updated (no breaking changes)
