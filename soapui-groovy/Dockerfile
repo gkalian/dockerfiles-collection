@@ -1,4 +1,4 @@
-FROM openjdk:11.0.16-jdk-slim
+FROM openjdk:21-jdk-slim
 
 LABEL maintainer="https://github.com/gkalian"
 LABEL description="SoapUI with Groovy for API testing and automation"
