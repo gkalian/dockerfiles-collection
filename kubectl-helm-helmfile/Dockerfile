@@ -1,4 +1,4 @@
-FROM alpine:3.22.0
+FROM alpine:3.22.1
 LABEL maintainer="https://github.com/gkalian"
 LABEL description="Alpine-based image with kubectl, Helm, Helmfile and related tools for Kubernetes deployment"
 
